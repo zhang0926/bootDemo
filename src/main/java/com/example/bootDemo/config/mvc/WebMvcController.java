@@ -1,4 +1,4 @@
-package com.example.bootDemo;
+package com.example.bootDemo.config.mvc;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @Package: com.example.bootDemo
  * @ClassName: WebMvcController
  * @author: zhangxiao
- * @Description: ${description}
+ * @Description: mvc控制器
  */
 @Configuration
 public class WebMvcController implements WebMvcConfigurer {
