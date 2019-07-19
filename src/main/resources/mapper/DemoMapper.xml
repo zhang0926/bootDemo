@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.bootDemo.demo.mapper.IDemoMapper">
+
+
+    <resultMap id="BaseResultMap" type="com.example.bootDemo.demo.entity.Demo">
+        <result column="id" jdbcType="VARCHAR" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="age" jdbcType="INTEGER" property="age"/>
+    </resultMap>
+
+    <select id="selectById" resultMap="BaseResultMap">
+        select * from demo
+        where id = #{id}
+    </select>
+
+    <update id="updateById">
+        update demo set age = 10, name = "zhangxiao"
+        where id = #{id}
+    </update>
+
+    <delete id="deleteById">
+        delete * from demo
+        where id = #{id}
+    </delete>
+
+</mapper>

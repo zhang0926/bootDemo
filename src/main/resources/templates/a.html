@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket+STOMP</title>
+    <script th:src="@{sockjs.min.js}"></script>
+    <script th:src="@{stomp.min.js}"></script>
+    <script th:src="@{jquery.js}"></script><!-- 请注意IE浏览器兼容性 -->
+</head>
+<body>
+<a href="javascript:WebSocketTest()">运行 WebSocket</a>
+<a href="javascript:webSocketClose()">关闭WebSocket</a>
+<div id="look" class="m">
+
+</div>
+<input id="message">
+<a href="javascript:send()">发送消息</a>
+</body>
