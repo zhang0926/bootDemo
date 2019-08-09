@@ -5,7 +5,9 @@ import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
 
 /**
  * @Copyright (C), 2019,北京同创永益科技发展有限公司
@@ -23,7 +25,7 @@ public class MybatisController {
     private IDemoService demoService;
 
     @GetMapping("/select/id")
-    public Object selectById(String id){
+    public Object selectById(@RequestParam("id") String id){
         return demoService.selectById(id);
     }
 
