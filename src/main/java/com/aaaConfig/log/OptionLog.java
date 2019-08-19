@@ -1,4 +1,4 @@
-package com.example.bootDemo.config.log;
+package com.aaaConfig.log;
 
 import java.lang.annotation.*;
 

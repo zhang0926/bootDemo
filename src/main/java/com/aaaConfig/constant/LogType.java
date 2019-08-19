@@ -1,4 +1,4 @@
-package com.example.bootDemo.config.constant;
+package com.aaaConfig.constant;
 
 /**
  * @Copyright (C), 2019,北京同创永益科技发展有限公司

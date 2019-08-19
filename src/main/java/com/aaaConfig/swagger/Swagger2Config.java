@@ -1,4 +1,4 @@
-package com.example.bootDemo.config.swagger;
+package com.aaaConfig.swagger;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
