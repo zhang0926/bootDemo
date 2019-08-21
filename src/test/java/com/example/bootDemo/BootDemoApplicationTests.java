@@ -3,11 +3,14 @@ package com.example.bootDemo;
 import com.example.bootDemo.demo.mapper.IDemoMapper;
 import com.mybatis.generator.mapper.DemoMapper;
 import com.mybatis.generator.pojo.DemoExample;
+import com.rabbitmq.direct.Sender;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.UUID;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -17,6 +20,9 @@ public class BootDemoApplicationTests {
 
 	@Autowired
 	private IDemoMapper demoMappers;
+
+	@Autowired
+	private Sender firstSender;
 
 	@Test
 	public void doTest(){
@@ -29,5 +35,20 @@ public class BootDemoApplicationTests {
 //        List<Demo> demoList = demoMapper.selectByExample(demoExample);
 //        System.out.println(demoList);
 	}
+
+
+	@Test
+	public void doTest1(){
+		String s1 = "";
+		System.out.println(s1.trim());
+	}
+
+	@Test
+	public void send(String message){
+		String uuid = UUID.randomUUID().toString();
+		firstSender.send(uuid, "1234567890");
+	}
+
+
 
 }

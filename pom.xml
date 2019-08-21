@@ -79,6 +79,12 @@
 			<scope>8.0.16</scope>
 		</dependency>
 
+		<!-- rabbitmq依赖 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
+		</dependency>
+
 		<!--引入swagger文档-->
 		<dependency>
 			<groupId>io.springfox</groupId>
@@ -127,10 +133,12 @@
 			<version>1.16.20</version>
 			<scope>provided</scope>
 		</dependency>
+
+		<!---->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.11</version>
+			<version>4.12</version>
 		</dependency>
 
 

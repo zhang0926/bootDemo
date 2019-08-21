@@ -15,7 +15,7 @@ import org.springframework.web.socket.server.standard.ServerEndpointExporter;
  */
 @Configuration
 @EnableWebSocket
-public class SocketConfig {
+public class SocketConfigDemo {
 
     /**
      * 自动扫描配置了@ServerEndpoint注解的处理类，并生成实例

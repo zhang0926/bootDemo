@@ -28,6 +28,14 @@ spring:
       pool:
         max-active: 20
 
+  #rabbitmq参数配置
+  rabbitmq:
+    host: 47.102.192.139
+    port: 5672
+    username: guest
+    password: guest
+    publisher-confirms: true
+
 #服务注册配置
 eureka:
   client:
