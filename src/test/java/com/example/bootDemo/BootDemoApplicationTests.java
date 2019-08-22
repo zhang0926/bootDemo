@@ -42,13 +42,4 @@ public class BootDemoApplicationTests {
 		String s1 = "";
 		System.out.println(s1.trim());
 	}
-
-	@Test
-	public void send(String message){
-		String uuid = UUID.randomUUID().toString();
-		firstSender.send(uuid, "1234567890");
-	}
-
-
-
 }

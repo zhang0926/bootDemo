@@ -38,7 +38,7 @@ public class RabbitMqConfig {
 
     @Bean
     public Queue firstQueue(){
-        return new Queue("firstQueue", true, false, false);
+        return new Queue("firstQueue");
     }
 
     @Bean
@@ -54,7 +54,7 @@ public class RabbitMqConfig {
 
 
     /**
-     将消息队列1和交换机进行绑定
+     * 将消息队列1和交换机进行绑定
      */
     @Bean
     public Binding binding_one() {

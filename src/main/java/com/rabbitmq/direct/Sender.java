@@ -6,6 +6,8 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Date;
+
 /**
  * @Copyright (C), 2019,北京同创永益科技发展有限公司
  * @Package: com.rabbitmq.direct
@@ -19,8 +21,11 @@ public class Sender {
     @Autowired
     private RabbitTemplate template;
 
-    public void send(String uuid, Object message){
-        CorrelationData correlationId = new CorrelationData(uuid);
-        template.convertAndSend(RabbitMqConfig.EXCHANGE, RabbitMqConfig.ROUTINGKEY2, message, correlationId);
+    public void send(){
+//        CorrelationData correlationId = new CorrelationData(uuid);
+//        template.convertAndSend(RabbitMqConfig.EXCHANGE, RabbitMqConfig.ROUTINGKEY2, message, correlationId);
+        String message = "firstQueue" + new Date();
+        template.convertAndSend("firstQueue", message);
+
     }
 }
