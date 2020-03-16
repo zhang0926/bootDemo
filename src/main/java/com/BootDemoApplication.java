@@ -23,16 +23,16 @@ public class BootDemoApplication {
 
 
 	public static void main(String[] args) {
-		SpringApplication bootstrap = new SpringApplication(BootDemoApplication.class);
-		bootstrap.setBanner(new Banner() {
-			@Override
-			public void printBanner(Environment environment, Class<?> sourceClass, PrintStream out) {
-				System.out.println("nihao 123456");
-			}
-		});
-		bootstrap.setBannerMode(Banner.Mode.CONSOLE);
-		bootstrap.run(args);
-//		SpringApplication.run(BootDemoApplication.class, args);
+//		SpringApplication bootstrap = new SpringApplication(BootDemoApplication.class);
+//		bootstrap.setBanner(new Banner() {
+//			@Override
+//			public void printBanner(Environment environment, Class<?> sourceClass, PrintStream out) {
+//				System.out.println("nihao 123456");
+//			}
+//		});
+//		bootstrap.setBannerMode(Banner.Mode.CONSOLE);
+//		bootstrap.run(args);
+		SpringApplication.run(BootDemoApplication.class, args);
 	}
 
 }

@@ -1,7 +1,7 @@
 
 #服务端口配置
 server:
-  port: 9123
+  port: 9999
 
 spring:
   application:
@@ -30,11 +30,20 @@ spring:
 
   #rabbitmq参数配置
   rabbitmq:
-    host: 47.102.192.139
-    port: 5672
+    addresses: 47.102.192.139:5672
+#    host:
+#    port: 5672
+    virtual-host: /
     username: guest
     password: guest
     publisher-confirms: true
+
+##   消费者配置
+#    listener:
+#      simple:
+
+
+
 
 #服务注册配置
 eureka:

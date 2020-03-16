@@ -13,7 +13,7 @@ import java.util.Date;
  * @Package: com.rabbitmq.direct
  * @ClassName: Sender
  * @author: zhangxiao
- * @Description: ${description}
+ * @Description: 消息发送者
  */
 @Component
 public class Sender {
@@ -22,10 +22,13 @@ public class Sender {
     private RabbitTemplate template;
 
     public void send(){
-//        CorrelationData correlationId = new CorrelationData(uuid);
-//        template.convertAndSend(RabbitMqConfig.EXCHANGE, RabbitMqConfig.ROUTINGKEY2, message, correlationId);
-        String message = "firstQueue" + new Date();
-        template.convertAndSend("firstQueue", message);
+        CorrelationData correlationId = new CorrelationData();
+        correlationId.setId("123");
+        template.convertAndSend(RabbitMqConfig.EXCHANGE, "123.1", "xiaoxiti", correlationId);
+//        EXCHANGE  交换机
+//        ROUTINGKEY2  路由键
+//        message    消息对象
+//        correlationId   消息唯一id
 
     }
 }

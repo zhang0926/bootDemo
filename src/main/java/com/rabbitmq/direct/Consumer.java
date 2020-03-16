@@ -1,7 +1,6 @@
 package com.rabbitmq.direct;
 
-import org.springframework.amqp.rabbit.annotation.RabbitHandler;
-import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.amqp.rabbit.annotation.*;
 import org.springframework.stereotype.Component;
 
 /**
@@ -9,14 +8,20 @@ import org.springframework.stereotype.Component;
  * @Package: com.rabbitmq.direct
  * @ClassName: Consumer
  * @author: zhangxiao
- * @Description: ${description}
+ * @Description: 消息消费者
  */
 @Component
-@RabbitListener(queues = {"firstQueue"})
 public class Consumer {
 
-
-//    @RabbitListener(queues = {"firstQueue","secondQueue"}, containerFactory = "rabbitListenerContainerFactory")
+    /**
+     * 队列监听
+     */
+    @RabbitListener(
+            bindings = @QueueBinding(value = @Queue(value = "1111", durable = "true"),
+            exchange = @Exchange(name = "firstExchange", durable = "true", type = "topic"),
+            key = "123.*"
+            )
+    )
     @RabbitHandler
     public void handleMessage(String message) {
         // 处理消息

@@ -21,13 +21,19 @@ import java.util.Properties;
 @Configuration
 public class MybatisConfig {
 
-    //mybatis扫描实体类
+    /**
+     * mybatis扫描实体类
+     */
     private static final String TYPE_ALIASES_PACKAGE = "com.example.bootDemo.*.entity.**";
 
-    // mybatis扫描当前服务数据接口mapper文件
+    /**
+     * mybatis扫描当前服务数据接口mapper文件
+     */
     private static final String MYBATIS_CURRENT_MAPPER_PACKAGE = "com.example.bootDemo.*.mapper.**";
 
-    // mybatis扫描当前服务数据接口mapper文件对应的xml SQL处理文件
+    /**
+     * mybatis扫描当前服务数据接口mapper文件对应的xml SQL处理文件
+     */
     private static final String MYBATIS_CURRENT_MAPPER_XML = "classpath*:mapper/**/*.xml";
 
     @Bean

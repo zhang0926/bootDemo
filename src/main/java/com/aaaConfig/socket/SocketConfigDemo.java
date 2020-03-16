@@ -20,10 +20,10 @@ public class SocketConfigDemo {
     /**
      * 自动扫描配置了@ServerEndpoint注解的处理类，并生成实例
      */
-    @Bean
-    public ServerEndpointExporter serverEndpointExporter(){
-        return new ServerEndpointExporter();
-    }
+//    @Bean
+//    public ServerEndpointExporter serverEndpointExporter(){
+//        return new ServerEndpointExporter();
+//    }
     /**
      * 解决websocketConfiguration与@Scheduler冲突的问题
      */

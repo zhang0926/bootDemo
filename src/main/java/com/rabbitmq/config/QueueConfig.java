@@ -17,12 +17,12 @@ public class QueueConfig {
 
 //    @Bean
 //    public Queue firstQueue(){
-//        return new Queue("firstQueue", true, false, false);
+//        return new Queue("duilie1", true, false, false);
 //    }
 //
 //    @Bean
 //    public Queue secondQueue(){
-//        return new Queue("secondQueue", true, false, false);
+//        return new Queue("duilie2", true, false, false);
 //    }
 //
 //    @Bean
