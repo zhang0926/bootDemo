@@ -31,8 +31,6 @@ spring:
   #rabbitmq参数配置
   rabbitmq:
     addresses: 47.102.192.139:5672
-#    host:
-#    port: 5672
     virtual-host: /
     username: guest
     password: guest
